@@ -31,6 +31,6 @@ app.get('/', (req, res) => {
 
 app.use('/', Routes);
 
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
     console.log(`Server started at port no. ${PORT}`);
 });
