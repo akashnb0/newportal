@@ -1,9 +1,3 @@
-[build]
-  functions = "functions" # Assuming your Netlify Functions are located in a directory named "functions"
-
-[[plugins]]
-  package = "@netlify/plugin-functions-install-core"
-
 [[redirects]]
   from = "/*"
   to = "/index.html"
