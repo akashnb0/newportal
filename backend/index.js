@@ -11,11 +11,8 @@ dotenv.config();
 
 app.use(express.json({ limit: '10mb' }));
 
-app.use(cors({
-    origin: "*", // Allow requests from any origin
-    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-    credentials: true,
-}));
+// Enable CORS for all routes (including preflight requests)
+app.use(cors());
 
 mongoose
     .connect(process.env.MONGO_URL, {
