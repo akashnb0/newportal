@@ -14,7 +14,12 @@ dotenv.config();
 // app.use(bodyParser.urlencoded({ limit: '10mb', extended: true }));
 
 app.use(express.json({ limit: '10mb' }));
-app.use(cors());
+
+app.use(cors({
+    origin: 'https://sticoa.vercel.app', // Adjust this to your frontend domain
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    credentials: true,
+}));
 
 mongoose
     .connect(process.env.MONGO_URL, {
