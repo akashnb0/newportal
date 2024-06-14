@@ -83,7 +83,7 @@ const StudentHomePage = () => {
                                                         </>
                                                     )
                                                         :
-                                                        <Typography variant="h6">No Attendance Found</Typography>
+                                                        <Typography variant="h6">Please be active in the Notice section. You'll get test links there</Typography>
                                                 }
                                             </>
                                         }
